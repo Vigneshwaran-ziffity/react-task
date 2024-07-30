@@ -8,6 +8,16 @@ In the project directory, you can run:
 
 ### `npm start`
 
+For Tailwind installation:
+### 'npm install -D tailwindcss postcss autoprefixer'
+### 'npx tailwindcss init -p'
+
+For to install MUI library:
+### 'npm install @mui/material @emotion/react @emotion/styled'
+
+For product zoom install:
+### 'npm install react-medium-image-zoom'
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
