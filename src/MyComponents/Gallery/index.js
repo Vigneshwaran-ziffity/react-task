@@ -10,7 +10,7 @@ const [isSpecExpanded, setIsSpecExpanded] = useState(false);
 			<div className="product-gallery-section md:w-1/2 m-auto md:py-[3%] relative md:top-7">
 				<Zoom>
 					<img 
-						className="md:w-full !w-[60%] m-auto relative" 
+						className="md:!w-full !w-[60%] m-auto relative" 
 						src="./frame.png" alt="Product Image" 
 						style={{ width: '100%', height: 'auto', cursor: 'pointer' }} />
 				</Zoom>
