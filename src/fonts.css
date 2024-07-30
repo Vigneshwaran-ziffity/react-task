@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Norms-Bold';
+    src: url('./fonts/Norms-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Norms-Regular';
+    src: url('./fonts/Norms-Regular.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garamond-Premier-Pro';
+    src: url('./fonts/garamond-premier-pro-400.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
