@@ -99,9 +99,8 @@
 
 // export default CustomFrame;
 
-
-
 import React, { useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import frameData from '../../API/frame.json';
 
 const CustomFrame = () => {
@@ -113,6 +112,7 @@ const CustomFrame = () => {
   const [selectedWidth, setSelectedWidth] = useState('');
   const [selectedType, setSelectedType] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('');
+  const [activeSku, setActiveSku] = useState(null); // State to track active product
 
   const productsArray = Object.values(frameData);
 
@@ -143,6 +143,12 @@ const CustomFrame = () => {
       (selectedStatus === '' || product.m_status === selectedStatus)
     );
   });
+
+
+  // const handleClick = (product) => {
+  //   setActiveSku(product.m_sku); // Set active SKU
+
+  // };
 
   return (
     <div>
@@ -186,7 +192,12 @@ const CustomFrame = () => {
 
       <div className="grid gap-4 md:grid-cols-3 grid-cols-2 py-4">
         {filteredProducts.map((product) => (
-          <div key={product.m_sku} className="border border-gray-300 items-center p-2 rounded cursor-pointer box-border flex flex-row w-full hover:border-[#28A745] hover:bg-[#F0FFF4]">
+          <div
+            key={product.m_sku}
+            className={`border border-gray-300 items-center p-2 rounded cursor-pointer box-border flex flex-row w-full hover:border-[#28A745] hover:bg-[#F0FFF4] ${activeSku === product.m_sku ? 'bg-[#E0FFE6] border-[#28A745]' : ''}`}
+            
+          >
+            {/* onClick={() => handleClick(product)} */}
             <div className='frame-image w-[30%]'>
               <img
                 src={

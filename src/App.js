@@ -9,8 +9,8 @@ import CustomizeFooter from './MyComponents/Footer';
 function App() {
   	return (
     	<div>
-      		<div className="App md:h-screen md:border-2 overflow-hidden md:overflow-auto">
-        		<div className="main-header flex leading-none border-2 border-gray-300 border-l-0 w-[100%] h-[72px]">
+      		<div className="App md:h-screen overflow-hidden md:overflow-auto">
+        		<div className="main-header flex leading-none border-y border-gray-300 border-l-0 w-[100%] h-[72px]">
             		{/* <HamburgerMenu /> */}
           			<CustomMenu />
         		</div>

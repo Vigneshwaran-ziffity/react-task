@@ -4,7 +4,7 @@ const CustomizeFooter = () => {
   return (
     <div className="text-nowrap bg-white flex mt-auto h-[80px] items-center justify-end px-4 py-2 border-t-2 text-[#3B3B3B] fixed right-0 w-full bottom-0">
         <button 
-          className="action border-gray-300 hover:border-[#F04E2F] md:px-5 md:py-3 px-4 py-2 border-2 hover:bg-[#F04E2F] hover:text-white rounded-md cusact-summary font-medium md:text-sm text-xs"
+          className="action border-gray-300 hover:border-[#F04E2F] md:px-5 md:py-3 px-4 py-2 border-2 hover:bg-[#F04E2F] hover:text-white rounded-md cusact-summary md:text-sm text-xs font-semibold"
         >
           PROCEED TO SUMMARY
         </button>

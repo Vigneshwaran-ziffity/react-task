@@ -23,7 +23,7 @@ export default function ClearModal() {
 
   return (
     <div className="pl-2">
-       <Button onClick={handleOpen} className="action !border-gray-300 hover:!border-black !text-gray-600 !border-solid !border-2 ml-4 primary !px-3 hover:!text-white hover:!bg-black !font-semibold !text-sm">Clear</Button>
+       <Button onClick={handleOpen} className="action !border-gray-300 hover:!border-black !text-gray-600 !border-solid !border-2 ml-4 primary !px-3 hover:!text-white hover:!bg-black !font-semibold !text-xs">Clear</Button>
         <Modal
           open={open}
           onClose={handleClose}
