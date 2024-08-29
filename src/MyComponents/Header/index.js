@@ -2,7 +2,7 @@ import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { Route, BrowserRouter, Switch, Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 
 export default function CustomMenu() {
@@ -10,6 +10,12 @@ export default function CustomMenu() {
   
     const handleChange = (event, newValue) => {
       setValue(newValue);
+    };
+
+    const navigate = useNavigate();
+
+    const handleTabClick = (path) => {
+      navigate(path);
     };
     
     return (
@@ -38,7 +44,7 @@ export default function CustomMenu() {
                         },
                     }}
                 >
-                        <Tab  className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col  h-full" label={
+                        <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col  h-full" label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full active">
                                 <span className="w-full flex">
                                     <span className="tablinks-copy flex relative after:content-[''] after:block after:w-full after:h-[3px] after:bg-transparent after:absolute after:bottom-[-37px] text-gray-500">
@@ -52,8 +58,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
+                        } onClick={() => handleTabClick('/')} />
                         
-                        } to={"/"} />
                         <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col" label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full">
                                 <span className="w-full flex">
@@ -68,8 +74,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item  text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
-                        
-                        } />
+                        } onClick={() => handleTabClick('/topmat')} />
+
                         <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col " label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full">
                                 <span className="w-full flex">
@@ -84,8 +90,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item  text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
-                        
-                        } />
+                        } onClick={() => handleTabClick('/bottommat')} />
+
                         <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col " label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full">
                                 <span className="w-full flex">
@@ -100,8 +106,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item  text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
-                        
-                        } />
+                        } onClick={() => handleTabClick('/liner')} />
+
                         <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col " label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full">
                                 <span className="w-full flex">
@@ -116,8 +122,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item  text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
-                        
-                        } />
+                        }  onClick={() => handleTabClick('/artwork')}  />
+
                         <Tab className="tablinks md:!min-w-[20%] !md:px-9 !px-5 !flex !flex-col" label={
                             <span className="custom-header inline-flex items-center font-semibold flex-wrap text-left capitalize h-full">
                                 <span className="w-full flex">
@@ -132,8 +138,8 @@ export default function CustomMenu() {
                                 </span>
                                 <span className="selected-item  text-xs pt-1 w-full">Photo Paper/Doube Mats</span>
                             </span>
-                        
-                        } />
+                        } onClick={() => handleTabClick('/summary')} />
+
                 </Tabs>
             </Box>
         </div>

@@ -29,7 +29,7 @@ export default function ClearModal() {
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
-          aria-buttonsby="modal-modal-content"
+          aria-buttonsby="modal-modal-clear"
           BackdropProps={{
             sx: {
               backgroundColor: 'rgba(255,255,255,0.8)',
@@ -44,7 +44,7 @@ export default function ClearModal() {
           <Typography className="pb-4 text-gray-500" id="modal-modal-description" sx={{ mt: 2 }}>
             Are you sure to clear all the selected options?
           </Typography>
-          <Typography id="modal-modal-content" className="flex justify-end">
+          <Typography id="modal-modal-clear" className="flex justify-end">
             <Button onClick={handleClose} className="border-black ml-4 !px-3 !text-white !bg-black !font-semibold !min-w-20" >OK</Button>
             <Button onClick={handleClose} className="!text-black !ml-2 !font-semibold !border-gray-300 !border-2 !border-solid !min-w-20" >CANCEL</Button>
           </Typography>

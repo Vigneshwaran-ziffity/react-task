@@ -24,9 +24,9 @@ const Liner = () => {
 					</option>
 				))}
 			</select>
-            <div class="flex-1"></div>
-            <div class="flex-1"></div>
-            <div class="flex-1"></div>
+            <div className="flex-1"></div>
+            <div className="flex-1"></div>
+            <div className="flex-1"></div>
 		</form>
 		<div className="flex flex-wrap md:gap-6 gap-2 py-4">
 			{productsArray.map((product) => (

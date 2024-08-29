@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-const style = {
+const check = {
   position: 'absolute',
   top: '50%',
   left: '50%',
@@ -29,7 +29,7 @@ export default function DefaultModal() {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        aria-buttonsby="modal-modal-content"
+        aria-buttonsby="modal-modal-default"
 		BackdropProps={{
 			sx: {
 			  backgroundColor: 'rgba(255,255,255,0.8)',
@@ -37,14 +37,14 @@ export default function DefaultModal() {
 			},
 		  }}
       >
-        <Box sx={style} className="rounded-md">
+        <Box sx={check} className="rounded-md">
           <Typography className="!font-semibold" id="modal-modal-title" variant="h6" component="h2">
             Default
           </Typography>
           <Typography className="pb-4 text-gray-500" id="modal-modal-description" sx={{ mt: 2 }}>
             Are you sure to reset to the Original specification for all the options?
           </Typography>
-          <Typography id="modal-modal-content" className="flex justify-end">
+          <Typography id="modal-modal-default" className="flex justify-end">
             <Button onClick={handleClose} className="border-black ml-4 !px-3 !text-white !bg-black !font-semibold !min-w-20" disableEnforceFocus>OK</Button>
             <Button onClick={handleClose} className="!text-black !ml-2 !font-semibold !border-gray-300 !border-2 !border-solid !min-w-20" >CANCEL</Button>
           </Typography>
